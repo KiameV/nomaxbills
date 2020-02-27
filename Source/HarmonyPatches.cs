@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -15,7 +15,7 @@ namespace NoMaxBills
     {
         static HarmonyPatches()
         {
-            var harmony = HarmonyInstance.Create("com.showhair.rimworld.mod");
+            var harmony = new Harmony("com.showhair.rimworld.mod");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
 
             Log.Message(
